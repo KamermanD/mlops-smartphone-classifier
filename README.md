@@ -79,15 +79,18 @@
 Описание файлов:
 
 data.yaml — настройки загрузки и разбиения данных
+
 model.yaml — гиперпараметры модели
+
 train.yaml — параметры обучения
+
 mlflow.yaml — параметры логирования
 
 Результаты обучения:
 
-Лучшая модель сохраняется в outputs/models/best.pth
-Графики обучения (loss, accuracy) сохраняются в outputs/models/logs/
-Параметры и метрики сохраняются в MLflow
+Лучшая модель сохраняется в outputs/models/best.pth .
+Графики обучения (loss, accuracy) сохраняются в outputs/models/logs/ .
+Параметры и метрики сохраняются в MLflow.
 
 Dependencies
 Python 3.11
