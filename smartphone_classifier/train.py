@@ -86,7 +86,7 @@ def train(cfg: DictConfig) -> None:
 
         train_ds = SmartphoneDataset(train_df, get_train_transforms())
         val_ds = SmartphoneDataset(val_df, get_test_transforms())
-        
+
         train_loader = DataLoader(
             train_ds,
             batch_size=cfg.train.batch_size,
