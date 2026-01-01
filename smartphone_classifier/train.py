@@ -76,8 +76,6 @@ def train(cfg: DictConfig) -> None:
         df = df.sample(frac=1, random_state=42).reset_index(drop=True)
         if cfg.train.get("num_samples", None) is not None:
             df = df.head(cfg.train.num_samples)
-        print(df.head())
-        print(len(df))
 
         train_df, val_df = train_test_split(
             df,
@@ -87,11 +85,8 @@ def train(cfg: DictConfig) -> None:
         )
 
         train_ds = SmartphoneDataset(train_df, get_train_transforms())
-        img, label = train_ds[0]
-        print("Image shape:", img.shape)
-        print("Label:", label)
-
         val_ds = SmartphoneDataset(val_df, get_test_transforms())
+        
         train_loader = DataLoader(
             train_ds,
             batch_size=cfg.train.batch_size,

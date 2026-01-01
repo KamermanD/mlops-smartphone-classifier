@@ -5,15 +5,15 @@ stages:
     deps:
     - path: configs
       hash: md5
-      md5: 41d5d579ccd10d32ccda33711fad0a95.dir
-      size: 682
+      md5: 4f804b17d96f6bdee34299d0d8802f91.dir
+      size: 703
       nfiles: 5
     - path: smartphone_classifier
       hash: md5
-      md5: 67b53698347ae6d22b27b7d027f6475f.dir
-      size: 48558
+      md5: bb2f296c8cd13a0132681700d059f1cb.dir
+      size: 32658
       nfiles: 14
     - path: smartphone_classifier/train.py
       hash: md5
-      md5: 84f57900074b5798ecf8d9aa93de0010
-      size: 15002
+      md5: 6080d56d1baec44e4268fd73e4512d04
+      size: 6883

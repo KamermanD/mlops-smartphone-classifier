@@ -1,7 +1,7 @@
 venv
-/models
 tmp
 outputs
 __pycache__
 .dvc/cache/
 .dvc/tmp/
+/models

@@ -35,49 +35,46 @@
 Для запуска проекта необходимо настроить окружение и зависимости. Я использую **Poetry**.
 
 1. Клонируем репозиторий:
-   ```bash
    git clone https://github.com/KamermanD/mlops-smartphone-classifier.git
-   cd smartphone-classifier
-Создаём виртуальное окружение py (у меня Windows, поэтому для Windows использовал такие команды) :
-py -m venv venv (у меня версия Python 3.11.0, если что)
-.\venv\Scripts\Activate.ps1
 
-Устанавливаем poetry: (если не глобально)
-pip install poetry
+2. Создаём виртуальное окружение py (у меня Windows, поэтому для Windows использовал такие команды) :
+   py -m venv venv (у меня версия Python 3.11.0, если что)
+   .\venv\Scripts\Activate.ps1
 
-Запуск установки зависимостей:
-poetry install
+3. Устанавливаем poetry: (если не глобально)
+   pip install poetry
+   python -m pip install --upgrade pip (ели это необходимо, у меня без этого в poetry install были ошибки)
 
-Установка pre-commit:
-pip install pre-commit
-pre-commit run -a
+4. Запуск установки зависимостей:
+   poetry install
 
-Подгружаем данные через DVC:
-dvc pull  # remote "myremote" уже прописан в .dvc/config
 
-Для запуска обучения можно использовать одну из двух команд:
-1. Через Python:
-poetry run python commands.py
 
-2. Через DVC:
-dvc repro
+5. Подгружаем данные через DVC:
+   dvc pull  # remote "myremote" уже прописан в .dvc/config
+
+6. Для запуска обучения можно использовать одну из двух команд:
+   1. Через Python:
+      poetry run python commands.py
+
+   2. Через DVC:
+      dvc repro
+
+7. Установка pre-commit:
+   pip install pre-commit
+   pre-commit run -a
 
 Описание файлов:
 
 data.yaml — настройки загрузки и разбиения данных
-
 model.yaml — гиперпараметры модели
-
 train.yaml — параметры обучения
-
 mlflow.yaml — параметры логирования
 
 Результаты обучения:
 
 Лучшая модель сохраняется в outputs/models/best.pth
-
 Графики обучения (loss, accuracy) сохраняются в outputs/models/logs/
-
 Параметры и метрики сохраняются в MLflow
 
 Dependencies
