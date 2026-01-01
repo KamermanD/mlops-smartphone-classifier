@@ -1,0 +1,7 @@
+stages:
+  train:
+    cmd: python commands.py
+    deps:
+      - smartphone_classifier/train.py
+      - smartphone_classifier
+      - configs

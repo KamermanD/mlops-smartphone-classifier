@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "smartphone-classifier"
+version = "0.1.0"
+description = "ML project: smartphone model classification"
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+packages = [{ include = "smartphone_classifier" }]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pandas = "*"
+numpy = "*"
+torch = "*"
+torchvision = "*"
+scikit-learn = "*"
+hydra-core = "*"
+omegaconf = "*"
+mlflow = "*"
+matplotlib = "*"
+Pillow = "*"
+
+[tool.poetry.group.dev.dependencies]
+black = "*"
+isort = "*"
+flake8 = "*"
+ruff = "*"
+dvc = { version = "*", extras = ["gdrive"]}
+dulwich = "*"
+
+
+[build-system]
+requires = ["poetry-core>=1.6.0"]
+build-backend = "poetry.core.masonry.api"
