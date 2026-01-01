@@ -35,25 +35,31 @@
 Для запуска проекта необходимо настроить окружение и зависимости. Я использую **Poetry**.
 
 1. Клонируем репозиторий:
+   
    git clone https://github.com/KamermanD/mlops-smartphone-classifier.git
 
 2. Создаём виртуальное окружение py (у меня Windows, поэтому для Windows использовал такие команды) :
+   
    py -m venv venv (у меня версия Python 3.11.0, если что)
    .\venv\Scripts\Activate.ps1
 
 3. Устанавливаем poetry: (если не глобально)
+   
    pip install poetry
    python -m pip install --upgrade pip (ели это необходимо, у меня без этого в poetry install были ошибки)
 
 4. Запуск установки зависимостей:
+   
    poetry install
 
 
 
 5. Подгружаем данные через DVC:
+   
    dvc pull  # remote "myremote" уже прописан в .dvc/config
 
 6. Для запуска обучения можно использовать одну из двух команд:
+   
    1. Через Python:
       poetry run python commands.py
 
@@ -61,6 +67,7 @@
       dvc repro
 
 7. Установка pre-commit:
+   
    pip install pre-commit
    pre-commit run -a
 
