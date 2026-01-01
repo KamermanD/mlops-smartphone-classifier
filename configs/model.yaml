@@ -1,0 +1,3 @@
+model:
+  num_classes: 7
+  pretrained: true

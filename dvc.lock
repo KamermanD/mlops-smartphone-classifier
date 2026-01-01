@@ -1,0 +1,19 @@
+schema: '2.0'
+stages:
+  train:
+    cmd: python commands.py
+    deps:
+    - path: configs
+      hash: md5
+      md5: 41d5d579ccd10d32ccda33711fad0a95.dir
+      size: 682
+      nfiles: 5
+    - path: smartphone_classifier
+      hash: md5
+      md5: 67b53698347ae6d22b27b7d027f6475f.dir
+      size: 48558
+      nfiles: 14
+    - path: smartphone_classifier/train.py
+      hash: md5
+      md5: 84f57900074b5798ecf8d9aa93de0010
+      size: 15002
