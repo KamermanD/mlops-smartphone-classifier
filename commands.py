@@ -8,6 +8,6 @@ from smartphone_classifier.train import train
 def main(cfg: DictConfig) -> None:
     train(cfg)
 
-
+#test
 if __name__ == "__main__":
     main()
